@@ -1,7 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using Momentum.DynamoDb.Client;
 using Momentum.DynamoDb.Client.Interfaces;
 
-namespace Momentum.DynamoDb.Client
+namespace Momentum.DynamoDb
 {
     public static class ServiceCollectionExtensions
     {

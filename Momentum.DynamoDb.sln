@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E7F55DE3-46E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum.DynamoDb", "src\Momentum.DynamoDb\Momentum.DynamoDb.csproj", "{5E5E981D-6C12-4125-BDE0-A35D8C5801CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum.DynamoDb.Repositories", "src\Momentum.DynamoDb.Repositories\Momentum.DynamoDb.Repositories.csproj", "{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{5E5E981D-6C12-4125-BDE0-A35D8C5801CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E5E981D-6C12-4125-BDE0-A35D8C5801CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E5E981D-6C12-4125-BDE0-A35D8C5801CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E5E981D-6C12-4125-BDE0-A35D8C5801CD} = {E7F55DE3-46E4-4191-A39B-9ADD328EC033}
+		{8A97D5CD-CBEF-4411-A6F8-43A4F9FC7D1F} = {E7F55DE3-46E4-4191-A39B-9ADD328EC033}
 	EndGlobalSection
 EndGlobal

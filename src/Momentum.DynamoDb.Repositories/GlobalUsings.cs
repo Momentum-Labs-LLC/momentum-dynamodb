@@ -1,0 +1,1 @@
+global using DynamoDbPage = System.Collections.Generic.Dictionary<string, Amazon.DynamoDBv2.Model.AttributeValue>;
