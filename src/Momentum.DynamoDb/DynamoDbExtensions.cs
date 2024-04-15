@@ -47,6 +47,19 @@ namespace Momentum.DynamoDb
             return fields.AddField(name, value.ToString());
         } // end method
 
+        public static Dictionary<string, AttributeValue> AddField(
+            this Dictionary<string, AttributeValue> fields,
+            string name,
+            Guid? value)
+        {
+            if(value.HasValue)
+            {
+                fields.AddField(name, value.Value);
+            } // end if
+
+            return fields;
+        } // end method
+
         public static Guid? ReadGuid(
             this Dictionary<string, AttributeValue> fields,
             string name,
