@@ -6,4 +6,12 @@ namespace Momentum.DynamoDb.Repositories.Interfaces
         where TConfig : IDynamoDbRepositoryConfiguration
     {        
     } // end interface
+
+    public interface IDynamoDbRepository<T, TConfig> : IRepository<T>, IDynamoDbRepository<Guid, T, TConfig>
+        where TConfig : IDynamoDbRepositoryConfiguration
+    {} // end interface
+
+    public interface IDynamoDbLookupRepository<T, TConfig> : ILookupRepository<T>, IDynamoDbRepository<int, T, TConfig>
+        where TConfig : IDynamoDbRepositoryConfiguration
+    {} // end interface
 } // end namespace

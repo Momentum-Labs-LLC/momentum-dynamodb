@@ -95,4 +95,32 @@ namespace Momentum.DynamoDb.Repositories
         protected abstract Task<Dictionary<string, AttributeValue>> BuildDocumentAsync(T item, CancellationToken token = default);
         protected abstract Task<T> ReadDocumentAysnc(Dictionary<string, AttributeValue> document, CancellationToken token = default);
     } // end class
+
+    public abstract class DynamoDbRepositoryBase<T, TConfig> :
+            DynamoDbRepositoryBase<Guid, T, TConfig>,
+            IDynamoDbRepository<T, TConfig>
+        where TConfig : IDynamoDbRepositoryConfiguration
+    {
+        protected DynamoDbRepositoryBase(
+                IDynamoDBClientFactory clientFactory, 
+                TConfig configuration, 
+                ILogger<DynamoDbRepositoryBase<T, TConfig>> logger) 
+            : base(clientFactory, configuration, logger)
+        {
+        } // end method
+    } // end class
+
+    public abstract class DynamoDbLookupRepositoryBase<T, TConfig> :
+            DynamoDbRepositoryBase<int, T, TConfig>,
+            IDynamoDbLookupRepository<T, TConfig>
+        where TConfig : IDynamoDbRepositoryConfiguration
+    {
+        protected DynamoDbLookupRepositoryBase(
+                IDynamoDBClientFactory clientFactory, 
+                TConfig configuration, 
+                ILogger<DynamoDbLookupRepositoryBase<T, TConfig>> logger) 
+            : base(clientFactory, configuration, logger)
+        {
+        } // end method
+    } // end class
 } // end namespace
